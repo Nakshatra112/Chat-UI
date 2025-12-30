@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat UI</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #e5ddd5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Chat Container */
+    .chat-container {
+      width: 360px;
+      height: 600px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* Header */
+    .chat-header {
+      background: #075e54;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .chat-header h3 {
+      font-size: 16px;
+    }
+
+    /* Messages */
+    .chat-body {
+      flex: 1;
+      padding: 15px;
+      background: #dcf8c6;
+      overflow-y: auto;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 14px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .received {
+      background: white;
+      align-self: flex-start;
+      border-top-left-radius: 0;
+    }
+
+    .sent {
+      background: #34b7f1;
+      color: white;
+      align-self: flex-end;
+      border-top-right-radius: 0;
+    }
+
+    /* Input */
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      background: #f0f0f0;
+      gap: 10px;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+    }
+
+    .chat-input button {
+      background: #075e54;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="chat-container">
+
+    <!-- Header -->
+    <div class="chat-header">
+      <img src="https://i.pravatar.cc/100" alt="profile">
+      <h3>Alex</h3>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-body">
+      <div class="message received">
+        Hey! 👋
+      </div>
+
+      <div class="message sent">
+        Hi Alex! How are you?
+      </div>
+
+      <div class="message received">
+        I'm good 😊 Working on a new project.
+      </div>
+
+      <div class="message sent">
+        Nice! This chat UI looks cool 😄
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message..." />
+      <button>➤</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
